@@ -36,22 +36,7 @@ Trên máy khác, thay đường dẫn `JAVA_HOME` bằng thư mục cài JDK 21
 Các lệnh trên chỉ thay đổi môi trường của terminal hiện tại.
 Lần chạy Maven Wrapper đầu tiên cần mạng để tải Maven và dependency.
 
-## Tạo cấu hình local
 
-`config/application.example.yml` là cấu hình mẫu công khai, chỉ có thông tin
-database thực hành. Tạo cấu hình local nếu file chưa tồn tại:
-
-```powershell
-New-Item -ItemType Directory -Path 'src/main/resources' -Force | Out-Null
-if (-not (Test-Path -LiteralPath 'src/main/resources/application.yml')) {
-    Copy-Item -LiteralPath 'config/application.example.yml' -Destination 'src/main/resources/application.yml'
-}
-```
-
-File local nằm trong `.gitignore` và `.copilotignore`. `.gitignore` chỉ kiểm
-soát việc theo dõi file bằng Git; hiệu lực loại trừ của công cụ AI cần được
-kiểm tra riêng với công cụ sử dụng. Không đưa thông tin kết nối thật vào
-file cấu hình mẫu.
 
 ## Build và chạy
 
@@ -173,18 +158,5 @@ Record có masking, không trả Entity ra HTTP.
 | 4 | Hai API, validation, masking và xử lý lỗi |
 | 5 | Kiểm thử nghiệp vụ, audit và hoàn thiện bài nộp |
 
-Mỗi bước được trình người dùng duyệt trước khi thực hiện.
-Kết quả kiểm chứng được ghi trong `docs/STEP_2_VERIFICATION.md`.
-Khung kiến trúc và kết quả build Bước 3 được ghi tại
-[báo cáo Bước 3](docs/STEP_3_VERIFICATION.md).
-Kết quả build và chạy thử hai API xem tại
-[báo cáo Bước 4](docs/STEP_4_VERIFICATION.md).
-Kết quả nghiệm thu local xem tại [báo cáo Bước 5](docs/STEP_5_VERIFICATION.md).
 
-## Tài liệu chính thức
 
-- [Yêu cầu hệ thống Spring Boot 3.5](https://docs.spring.io/spring-boot/3.5/system-requirements.html)
-- [Cấu hình SQL, JPA và H2](https://docs.spring.io/spring-boot/3.5/reference/data/sql.html)
-- [Apache Maven Wrapper](https://maven.apache.org/tools/wrapper/)
-- [Truyền JVM arguments khi chạy bằng Maven](https://docs.spring.io/spring-boot/3.5/maven-plugin/run.html)
-- [Networking properties Java 21](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html)
