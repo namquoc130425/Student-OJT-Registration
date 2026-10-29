@@ -37,9 +37,7 @@ REST API Spring Boot đúng đặc tả, phân lớp rõ ràng và bảo vệ
 dữ liệu cá nhân.
 
 [CONTEXT]
-
-Xây dựng phân hệ đăng ký sinh viên OJT theo bài tập
-R2S Academy, sử dụng:
+ sử dụng:
 
 - Java 21.
 - Spring Boot 3.x, đáp ứng yêu cầu 3.2+ của đề.
@@ -56,8 +54,6 @@ Dự án có hai API:
 1. POST /api/v1/students/register
 2. GET /api/v1/students/{id}
 
-Mã nguồn được tự triển khai theo đặc tả. Các dự án tham khảo
-được dùng để đối chiếu nghiệp vụ.
 
 [TASK]
 
@@ -199,8 +195,7 @@ G. Quy trình thực hiện
 Bạn là Java Build Engineer phụ trách khởi tạo dự án Spring Boot.
 
 [CONTEXT]
-Học viên Nguyễn Vương Quốc Nam đã duyệt Bước 2. Dùng Java 21,
-Spring Boot 3.5.16, Maven 3.9.15, H2 in-memory, JPA và Validation.
+Dùng Java 21,Spring Boot 3.5.16, Maven 3.9.15, H2 in-memory, JPA và Validation.
 Mọi ràng buộc nghiệp vụ trong prompt chính tiếp tục có hiệu lực.
 
 [TASK]
@@ -208,11 +203,10 @@ Tạo pom.xml, Maven Wrapper, lớp khởi động, cấu hình mẫu H2 và REA
 Tạo cấu hình local từ mẫu rồi build và chạy để kiểm chứng kết nối H2.
 
 [CONSTRAINT]
-Chỉ thực hiện Bước 2. Không tạo các lớp hoặc API nghiệp vụ của Bước 3/4.
-Dùng spring-boot-starter-parent để quản lý dependency. Không dùng Lombok.
-Dùng JDK 21 trong terminal, không thay đổi JAVA_HOME toàn máy.
-Cấu hình mẫu chỉ dùng database thực hành, không chứa bí mật thật.
-Không ghi nhận test nghiệp vụ đã PASS khi chưa triển khai API.
+Chỉ thực hiện Bước 2. Không tạo các lớp hoặc API nghiệp vụ Dùng spring-boot-starter-parent
+để quản lý dependency. Không dùng Lombok.Dùng JDK 21 trong terminal, không thay đổi JAVA_HOME
+toàn máy.Cấu hình mẫu chỉ dùng database thực hành, không chứa bí mật thật.Không ghi nhận test
+nghiệp vụ đã PASS khi chưa triển khai API.
 
 [OUTPUT]
 Khung dự án build được, Maven Wrapper chạy bằng JDK 21,
@@ -226,8 +220,7 @@ Khung dự án build được, Maven Wrapper chạy bằng JDK 21,
 Bạn là Java Architect phụ trách tổ chức source và hợp đồng giữa các lớp.
 
 [CONTEXT]
-Học viên Nguyễn Vương Quốc Nam đã duyệt Bước 3. Khung Spring Boot 3.5.16,
-Java 21, Maven Wrapper và H2 đã được kiểm chứng tại Bước 2.
+Khung Spring Boot 3.5.16,Java 21, Maven Wrapper và H2 đã được kiểm chứng tại Bước 2.
 Giữ nguyên prompt chính và sáu quyết định đã được người dùng chốt.
 
 [TASK]
@@ -255,8 +248,7 @@ quyết định kiến trúc và báo cáo kiểm chứng Bước 3.
 Bạn là Senior Java Developer triển khai API đúng hợp đồng và kiến trúc đã duyệt.
 
 [CONTEXT]
-Nguyễn Vương Quốc Nam đã duyệt Bước 4. Dự án dùng Spring Boot 3.5.16,
-Java 21, JPA, Jakarta Validation, H2; xem docs/ARCHITECTURE.md.
+Dự án dùng Spring Boot 3.5.16,Java 21, JPA, Jakarta Validation, H2; xem docs/ARCHITECTURE.md.
 
 [TASK]
 Viết Entity/Repository, DTO Record, Service, hai API đăng ký/tra cứu và
@@ -282,8 +274,7 @@ Mã nguồn hoạt động, build thành công và báo cáo Bước 4 ghi đún
 Bạn là Java QA Engineer kiểm chứng code theo API Contract, không suy đoán PASS.
 
 [CONTEXT]
-Nguyễn Vương Quốc Nam đã duyệt Bước 5. Hai API được triển khai ở Bước 4,
-Java 21, Spring Boot 3.5.16, JPA, H2, Jakarta Validation và DTO Record.
+Hai API được triển khai ở Bước 4,Java 21, Spring Boot 3.5.16, JPA, H2, Jakarta Validation và DTO Record.
 
 [TASK]
 Viết và chạy unit/integration test, giá trị biên, chống trùng đồng thời,
