@@ -1,13 +1,6 @@
 # Student OJT Registration Service
 
-**Học viên:** Nguyễn Vương Quốc Nam  
-**Bài thực hành:** R2S Academy — 6H Masterclass, AI Agent & Code Audit
 
-Dự án cung cấp hai API đăng ký và tra cứu hồ sơ sinh viên OJT theo đề bài.
-Đã triển khai Java Record DTO, validation, masking, kiểm tra trùng Email/CCCD
-và xử lý lỗi tập trung. Nghiệm thu local ở
-[Bước 5](docs/STEP_5_VERIFICATION.md) đạt **80 test tự động và 10 kịch bản cURL**.
-Xem [kiến trúc chi tiết](docs/ARCHITECTURE.md) để theo dõi trách nhiệm từng lớp.
 
 ## Công nghệ đã chọn
 
@@ -74,25 +67,6 @@ Nếu cổng 8080 đang được dùng, có thể chọn cổng khác cho lần 
 .\mvnw.cmd spring-boot:run '-Dspring-boot.run.arguments=--server.port=8081'
 ```
 
-### Lỗi socket tạm trên môi trường Windows kiểm chứng
-
-Trong môi trường kiểm chứng, chạy ứng dụng với thư mục socket mặc định
-gặp lỗi `Unable to establish loopback connection`, kèm `Invalid argument:
-connect`. Kiểm tra tối thiểu bằng Java NIO xác nhận có thể tạo Selector
-khi chỉ định thư mục socket trong dự án. Lệnh sau đã khởi động thành công:
-
-```powershell
-.\mvnw.cmd spring-boot:run '-Dspring-boot.run.jvmArguments=-Djdk.net.unixdomain.tmpdir=target'
-```
-
-Hoặc chạy file JAR sau khi build:
-
-```powershell
-java '-Djdk.net.unixdomain.tmpdir=target' -jar 'target/student-ojt-registration-0.0.1-SNAPSHOT.jar'
-```
-
-Tham số này chỉ áp dụng cho tiến trình đang chạy; không thay đổi cấu hình
-Java toàn máy. `target` phải tồn tại, được tạo bởi bước build.
 
 ## Kiểm tra kết nối H2
 
