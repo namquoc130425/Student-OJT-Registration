@@ -1,0 +1,65 @@
+{
+  "author": "Nguyễn Vương Quốc Nam",
+  "recordedAt": "2026-10-29T08:29:07+07:00",
+  "maven": {
+    "command": ".\\mvnw.cmd -o -B -ntp clean verify",
+    "result": "BUILD SUCCESS",
+    "source": "target/surefire-reports/TEST-*.xml",
+    "summary": {
+      "tests": 80,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "name": "com.r2s.masterclass.student.controller.StudentApiIntegrationTest",
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.r2s.masterclass.student.dto.StudentRequestDTOTest",
+        "tests": 40,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.r2s.masterclass.student.dto.StudentResponseDTOTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.r2s.masterclass.student.service.impl.StudentRegistrationConcurrencyTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.r2s.masterclass.student.service.impl.StudentServiceImplTest",
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "curl": {
+    "command": ".\\scripts\\Test-Api.ps1",
+    "baseUri": "http://127.0.0.1:8080",
+    "checks": 10,
+    "passed": 10,
+    "failed": 0,
+    "source": "Observed script stdout: RESULT 10/10 cURL checks passed"
+  },
+  "notVerified": [
+    "AI tool ignore enforcement",
+    "GitHub repository and pull request evidence",
+    "Code coverage percentage"
+  ]
+}

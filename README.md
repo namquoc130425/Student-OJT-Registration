@@ -122,8 +122,20 @@ trong H2; dừng và chạy lại ứng dụng để xóa dữ liệu in-memory 
 - [Báo cáo và phạm vi kiểm chứng](docs/STEP_5_VERIFICATION.md).
 - [Số liệu test đã chạy](docs/test-results.json).
 
-Source và bốn sản phẩm bài nộp đã có tại local. Bằng chứng GitHub và hiệu
-lực chặn đọc thực tế của công cụ AI được ghi riêng là chưa xác minh.
+Source và bốn sản phẩm bài nộp đã có tại local và được push lên
+[repository GitHub của học viên](https://github.com/namquoc130425/Student-OJT-Registration).
+Hiệu lực chặn đọc thực tế của công cụ AI vẫn chưa được xác minh.
+
+## Quy trình Git
+
+Nhánh chính và mặc định là `main`. Luồng tích hợp:
+
+```text
+feature/student-ojt-registration → developer → main
+```
+
+Các lần tích hợp dùng merge commit để giữ lịch sử feature và developer.
+Xem [quy trình và bằng chứng GitHub](docs/GIT_WORKFLOW.md).
 
 ## Kiến trúc source
 
