@@ -305,8 +305,9 @@ AUDIT_CHECKLIST.md và nhật ký audit với số liệu thực tế.
 ## 3. Nhật ký audit và điều chỉnh
 
 Trạng thái hiện tại: Đã hoàn thành năm bước tại local, chạy toàn bộ 80 test
-tự động và 10 kịch bản cURL thành công. Bằng chứng GitHub và hiệu lực chặn
-đọc thực tế của công cụ AI chưa xác minh; không tuyên bố toàn bộ DoD là 100% PASS.
+tự động và 10 kịch bản cURL thành công. Mã nguồn và prompt đã được push lên
+GitHub theo yêu cầu tiếp theo của người dùng. Hiệu lực chặn đọc thực tế của
+công cụ AI chưa xác minh; không tuyên bố toàn bộ DoD là 100% PASS.
 
 ### Audit Bước 2
 
@@ -393,6 +394,18 @@ Chưa đánh dấu audit tổng thể hoặc toàn bộ nghiệp vụ là 100% P
 Bằng chứng: `docs/STEP_5_VERIFICATION.md`, `docs/test-results.json`,
 `AUDIT_CHECKLIST.md` và báo cáo JUnit sinh tại `target/surefire-reports/`.
 Không phát hiện lỗi nghiệp vụ cần sửa trong các kịch bản đã chạy.
+
+### Xuất bản GitHub theo yêu cầu người dùng
+
+- Repository: https://github.com/namquoc130425/Student-OJT-Registration.
+- Người dùng yêu cầu main là nhánh chính, có developer và một nhánh feature.
+- Feature được đặt tên feature/student-ojt-registration; chia commit theo
+  cấu hình, nghiệp vụ, test và tài liệu.
+- Kiểm tra Git ignore xác nhận cấu hình local, target và output không được commit.
+- Luồng tích hợp dùng merge commit: feature → developer → main.
+- Connector không có quyền ghi để tạo PR; không truy xuất credential để
+  lách giới hạn. Sử dụng Git push/merge đã được người dùng ủy quyền.
+- Xem docs/GIT_WORKFLOW.md để theo dõi repository và các nhánh.
 
 ### Mẫu ghi nhận khi có thay đổi sau nghiệm thu
 

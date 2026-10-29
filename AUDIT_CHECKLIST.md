@@ -5,7 +5,7 @@
 
 Code và API đã đạt bộ nghiệm thu local: **80 test tự động và 10 kịch bản
 cURL**, không có test lỗi hoặc bị bỏ qua. Bảng này phân biệt bằng chứng
-local với yêu cầu liên quan đến công cụ AI và GitHub chưa được xác minh.
+local với yêu cầu liên quan đến công cụ AI và bằng chứng xuất bản GitHub.
 
 ## Đối chiếu Quality Gate trong đề
 
@@ -17,11 +17,13 @@ local với yêu cầu liên quan đến công cụ AI và GitHub chưa được
 | 4 | Jakarta Validation | Đạt local | 40 test request DTO; test API kiểm tra errors object, thông báo tiếng Việt và dữ liệu thiếu/null/trống. |
 | 5 | Duplicate Business Logic | Đạt local | Trùng riêng Email/CCCD trả 409; 2 test đồng thời buộc phát sinh lỗi unique thật trên H2, chỉ một hồ sơ được commit. |
 | 6 | Exception Handling | Đạt local | 400/409/404 đúng contract; 405/415 giữ status; cURL kiểm tra lỗi DB kỹ thuật trả 500 và không lộ SQL/trace/PII dù client yêu cầu trace/message. |
-| 7 | Prompt Evidence | Đạt file local; GitHub chưa thực hiện | Dev_Prompt_Library.md có R-C-T-C-O và nhật ký từng bước. Chưa có repository/PR GitHub của bài nộp này. |
+| 7 | Prompt Evidence | Đạt file local và GitHub | Dev_Prompt_Library.md có R-C-T-C-O và nhật ký từng bước, đã được push lên repository của học viên. Xem docs/GIT_WORKFLOW.md. Chưa tạo PR; tích hợp bằng Git merge commit. |
 
-Chưa tuyên bố **100% toàn bộ DoD**, vì hiệu lực bảo vệ của công cụ AI và
-bằng chứng GitHub chưa được xác minh. Không tự push code vào các repository
-tham khảo của người khác.
+Chưa tuyên bố **100% toàn bộ DoD**, vì hiệu lực bảo vệ của công cụ AI chưa
+được xác minh. Repository bài nộp là
+[namquoc130425/Student-OJT-Registration](https://github.com/namquoc130425/Student-OJT-Registration).
+Không push code vào các repository tham khảo của người khác. Chưa có PR;
+luồng tích hợp được thực hiện bằng các merge commit theo yêu cầu người dùng.
 
 ## Bốn sản phẩm bài nộp tại local
 
@@ -49,5 +51,6 @@ tham khảo của người khác.
 - [Báo cáo Bước 5](docs/STEP_5_VERIFICATION.md).
 - [Số liệu test](docs/test-results.json).
 - [Script cURL nghiệm thu](scripts/Test-Api.ps1).
+- [Repository và quy trình các nhánh](docs/GIT_WORKFLOW.md).
 - Chi tiết JUnit chạy lại bằng `mvnw.cmd clean verify`, báo cáo sinh tại
   `target/surefire-reports/`.
