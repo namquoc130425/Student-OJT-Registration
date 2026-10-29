@@ -1,0 +1,20 @@
+# Cấu hình local và dữ liệu nhạy cảm
+src/main/resources/application*.yml
+src/main/resources/application*.yaml
+src/main/resources/application*.properties
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Kết quả build Java/Maven
+/target/
+/output/
+*.class
+*.log
+
+# Cấu hình IDE cá nhân
+/.idea/
+*.iml
+/.vscode/
